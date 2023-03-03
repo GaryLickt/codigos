@@ -1,2 +1,2 @@
-# codigos-da-facul
-codigos simples de python que fiz durante a epoca da faculdade
+# ATENÇÃO
+Esses codigos são liberados para qualquer tipo de uso, são apenas codigos feitos para treinar, não possuem nenhum valor, logo podem ser usados por qualquer um que precise dos mesmos, não me importo com quem vai usar esses codigos, ou para o que vai usar, ja que os mesmo so servem para treinar, e gravar os codigos, para possiveis usos futuros, ou para tiração de duvidas que porem surgir como o tempo
