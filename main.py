@@ -24,3 +24,5 @@ if start == "não":
   print("Então se lasca mizera")
 if start == "talvez":
   print("desgraça de talvez, é sim ou não mizera")
+
+  
