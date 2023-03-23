@@ -25,4 +25,4 @@ if start == "não":
 if start == "talvez":
   print("desgraça de talvez, é sim ou não mizera")
 
-  
+ 
