@@ -4,14 +4,12 @@ Esses codigos são liberados para qualquer tipo de uso, são apenas codigos feit
 # Lembretes
 Esses são algumas linhas que podem ajudar a resolver conflitos em algumas plataformas de programação:
 
-===============================================
+===============================================<br />
 
-`print("Texto = {:.<numero>f}".format(variavel))`
-
-- funciona como o round, porem algumas plataformas de programação acabam não aceitando o round, oque lhe força a ter que usar esse "life hack" para add tantas casas decimais em um numero
-
-`<numero> = numero de casas decimais que o numero deve ter`
-`"variavel" = valor a ser transformado`
-`"Texto = " = texto a ser inserido antes do valor`
+`print("Texto = {:.<numero>f}".format(variavel))`<br />
+- funciona como o round, porem algumas plataformas de programação acabam não aceitando o round, oque lhe força a ter que usar esse "life hack" para add tantas casas decimais em um numero<br />
+`<numero> = numero de casas decimais que o numero deve ter`<br />
+`"variavel" = valor a ser transformado`<br />
+`"Texto = " = texto a ser inserido antes do valor`<br />
 
 ===============================================
