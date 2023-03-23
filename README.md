@@ -4,10 +4,9 @@ Esses codigos são liberados para qualquer tipo de uso, são apenas codigos feit
 # Lembretes
 Esses são algumas linhas que podem ajudar a resolver conflitos em algumas plataformas de programação:
 
-===============================================
-`print("Texto = {:.<numero>f}".format(variavel))`
-
-- funciona como o round, porem algumas plataformas de programação acabam não aceitando o round, oque lhe força a ter que usar esse "life hack" para add tantas casas decimais em um numero
+===============================================\n
+`print("Texto = {:.<numero>f}".format(variavel))`\n
+- funciona como o round, porem algumas plataformas de programação acabam não aceitando o round, oque lhe força a ter que usar esse "life hack" para add tantas casas decimais em um numero\n
 `<numero> = numero de casas decimais que o numero deve ter
 "variavel" = valor a ser transformado
 "Texto = " = texto a ser inserido antes do valor`
