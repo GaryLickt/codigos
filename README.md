@@ -10,10 +10,8 @@ Esses são algumas linhas que podem ajudar a resolver conflitos em algumas plata
 
 - funciona como o round, porem algumas plataformas de programação acabam não aceitando o round, oque lhe força a ter que usar esse "life hack" para add tantas casas decimais em um numero
 
-`<numero> = numero de casas decimais que o numero deve ter
-
-"variavel" = valor a ser transformado
-
-"Texto = " = texto a ser inserido antes do valor`
+`<numero> = numero de casas decimais que o numero deve ter`
+`"variavel" = valor a ser transformado`
+`"Texto = " = texto a ser inserido antes do valor`
 
 ===============================================
