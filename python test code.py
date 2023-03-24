@@ -28,10 +28,6 @@ time.sleep(1)
 cartItem = driver.find_element("css selector", "div.inventory_item_name")
 assert cartItem.text == "Sauce Labs Backpack"
 
-driver.find_element("css selector", "button.btn_primary").click()
-time.sleep(1)
-driver.find_element("css selector", "a.shopping_cart_link").click()
-time.sleep(1)
 driver.find_element("css selector", "button#checkout").click()
 time.sleep(1)
 driver.find_element("css selector", "input#first-name").send_keys("Carlos")
