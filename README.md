@@ -12,4 +12,14 @@ Esses são algumas linhas que podem ajudar a resolver conflitos em algumas plata
 `"variavel" = valor a ser transformado`<br />
 `"Texto = " = texto a ser inserido antes do valor`<br />
 
-===============================================
+===============================================<br />
+
+`(a + b + abs(a - b))/2`<br />
+- uma forma mais simples de verificar qual o maior numero entre 2 numeros, facilita codigos para achar o maior dentre 3 numeros, ja que ao inves de verificar os 3 numeros um por um, você pode simplismente comparar quem é o maior numero entre o 3º que sobrou, e o maior resultante dessa formula<br />
+`a, b` = numeros diferentes<br />
+
+===><br />
+
+`(a + b - abs(a - b))/2`<br />
+- uma versão do lembrete acima, porem serve para achar o MENOR numero entre 2 numeros, tambem facilita codigos para achar o menor numero dentre 3 numeros<br />
+`a, b` = numeros diferentes<br />
