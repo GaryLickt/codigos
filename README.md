@@ -1,17 +1,21 @@
 # ATENÇÃO
-Esses codigos são liberados para qualquer tipo de uso, são apenas codigos feitos para treinar, não possuem nenhum valor, logo podem ser usados por qualquer um que precise dos mesmos, não me importo com quem vai usar esses codigos, ou para o que vai usar, ja que os mesmo so servem para treinar, e gravar os codigos, para possiveis usos futuros, ou para tiração de duvidas que porem surgir como o tempo
+Esses codigos são liberados para qualquer tipo de uso, são apenas codigos feitos para treinar, não possuem nenhum valor, logo podem ser usados por qualquer um que precise dos mesmos, não me importo com quem vai usar esses codigos, ou para o que vai usar, ja que os mesmo so servem para treinar, e gravar os codigos, para possiveis usos futuros, ou para tiração de duvidas que porem surgir como o tempo<br />
 
 ===============================================<br />
 
 # Sumario
-Esses são os topicos abordados nesse README, que podem lhe ajudar em alguma coisa na sua vida:<br />
+- Esses são os topicos abordados nesse README, que podem lhe ajudar em alguma coisa na sua vida:<br />
   ||[-Lembretes-](https://github.com/GaryLickt/codigos#lembretes)<br />
   ||[-Gamemaker Studio 2-](https://github.com/GaryLickt/codigos#gamemaker-studio-2)<br />
+- Aqui vai tambem alguns links uteis que podem servir como ajuda extra para programar:<br />
+  ||[-Canal "Ponto e Virgula" (Desenvolvimento de jogos no Gamemaker Studio 2)-](https://www.youtube.com/@PontoeVirgulaOficial)<br />
+  ||[-Alura (Cursons online de Tecnologia)-](https://www.alura.com.br/)<br />
+  || -mais links em breve-<br />
   
 ===============================================<br />
 
 # Lembretes
-Esses são algumas linhas que podem ajudar a resolver conflitos em algumas plataformas de programação:
+Esses são algumas linhas que podem ajudar a resolver conflitos em algumas plataformas de programação:<br />
 
 ===============================================<br />
 
@@ -36,4 +40,4 @@ Esses são algumas linhas que podem ajudar a resolver conflitos em algumas plata
 ===============================================<br />
 
 # Gamemaker Studio 2
-Sim, aqui tem coisa sobre desenvolvimento de jogos no Gamemaker Studio 2
+Sim, aqui tem coisa sobre desenvolvimento de jogos no Gamemaker Studio 2<br />
