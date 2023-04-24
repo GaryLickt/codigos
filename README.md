@@ -1,6 +1,12 @@
 # ATENÇÃO
 Esses codigos são liberados para qualquer tipo de uso, são apenas codigos feitos para treinar, não possuem nenhum valor, logo podem ser usados por qualquer um que precise dos mesmos, não me importo com quem vai usar esses codigos, ou para o que vai usar, ja que os mesmo so servem para treinar, e gravar os codigos, para possiveis usos futuros, ou para tiração de duvidas que porem surgir como o tempo
 
+# Sumario
+Esses são os topicos abordados nesse README, que podem lhe ajudar em alguma coisa na sua vida:<br />
+  ||[-Lembretes-](https://github.com/GaryLickt/codigos#lembretes)<br />
+  ||[-Gamemaker Studio 2-](https://github.com/GaryLickt/codigos#gamemaker-studio-2)<br />
+
+
 # Lembretes
 Esses são algumas linhas que podem ajudar a resolver conflitos em algumas plataformas de programação:
 
@@ -23,3 +29,8 @@ Esses são algumas linhas que podem ajudar a resolver conflitos em algumas plata
 `(a + b - abs(a - b))/2`<br />
 - uma versão do lembrete acima, porem serve para achar o MENOR numero entre 2 numeros, tambem facilita codigos para achar o menor numero dentre 3 numeros<br />
 `a, b` = numeros diferentes<br />
+
+===============================================<br />
+
+# Gamemaker Studio 2
+Sim, aqui tem coisa sobre desenvolvimento de jogos no Gamemaker Studio 2
