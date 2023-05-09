@@ -1,4 +1,4 @@
-import time
+import time 
 from selenium import webdriver
 
 driver_path = "C:\\Users\\Aluno\\Documents\\Python Scripts\\chromedriver_win32\\chromedriver_win32.exe"
