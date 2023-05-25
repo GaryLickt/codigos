@@ -1,0 +1,52 @@
+P Q R S U
+
+P = cargo (V se for funcionario / F se for visitante)
+Q = tem credencial (V se tiver a credencial / F se não tiver)
+R = credencial ainda funciona (V se estiver / F se não estiver)
+S = esta tentando entrar em uma sala especial (V se estiver / F se não estiver)
+U = esta tendo alguma emergência? (V se estiver / F se não)
+
+se o resultado final da tabela for V, significa que a catraca abriu
+caso contrario, a catraca não se abriu.
+
+essa foi a tabela que eu imaginei que seria
+
+(~U -> ((P^Q^R^(S v ~S)) v (~P^Q^R^~S))) <=> V
+
+(bem cagada porque não pensei em nada)
+
+tentando aplicar a tabela:
+
+P Q R S T 	~S	Sv~S	P^Q		
+V V V V V 	F	  V	  V
+V V V V F	  F	  V 	V
+V V V F V	  V	  V	  V
+V V V F F	  V	  V	  V
+V V F V V	  F	  V	  V
+V V F V F	  F	  V	  V
+V V F F V	  V	  V	  V
+V V F F F	  V	  V	  V
+V F V V V	  F	  V	  F
+V F V V F	  F	  V	  F
+V F V F V	  V	  V	  F
+V F V F F	  V	  V	  F
+V F F V V	  F	  V	  F
+V F F V F	  F	  V	  F
+V F F F V	  V	  V	  F
+V F F F F	  V	  V	  F
+F V V V V	  F	  V	  F
+F V V V F	  F	  V	  F
+F V V F V	  V	  V	  F
+F V V F F	  V	  V	  F
+F V F V V	  F	  V	  F
+F V F V F	  F	  V	  F
+F V F F V	  V	  V	  F
+F V F F F	  V	  V	  F
+F F V V V	  F	  V	  F
+F F V V F	  F	  V	  F
+F F V F V	  V	  V	  F
+F F V F F	  V	  V	  F
+F F F V V	  F	  V	  F
+F F F V F	  F	  V	  F
+F F F F V	  V	  V	  F
+F F F F F	  V	  V	  F
