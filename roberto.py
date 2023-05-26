@@ -1,2 +1,0 @@
-vaca = True
-print(vaca)
