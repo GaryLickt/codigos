@@ -1,3 +1,5 @@
+![w8ZJLtJbmuph](https://github.com/GaryLickt/codigos/assets/70419113/2102467a-35d7-4e02-8fd6-501afebbcd85)
+
 # ATENÇÃO
 Esses codigos são liberados para qualquer tipo de uso, são apenas codigos feitos para treinar, não possuem nenhum valor, logo podem ser usados por qualquer um que precise dos mesmos, não me importo com quem vai usar esses codigos, ou para o que vai usar, ja que os mesmo so servem para treinar, e gravar os codigos, para possiveis usos futuros, ou para tiração de duvidas que porem surgir como o tempo<br />
   
