@@ -1,5 +1,5 @@
 if (oControl.prepassou == false) and (yay == false) {
-var bob = instance_create_layer(x, y-(100 + irandom_range(-20,20)), "Instances", oFlyDrone)
+var bob = instance_create_layer(x, y-(132 + irandom_range(-20,20)), "Instances", oFlyDrone)
 bob.direction = point_direction(x, y, x-1, y);
 bob.speed = run + 2;
 

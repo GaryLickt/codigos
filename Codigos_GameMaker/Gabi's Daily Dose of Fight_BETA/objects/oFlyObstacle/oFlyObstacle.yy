@@ -9,12 +9,12 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "fabrica",
+    "path": "folders/Objects/Inimigos/fabrica.yy",
   },
   "parentObjectId": {
-    "name": "oObstacleParent",
-    "path": "objects/oObstacleParent/oObstacleParent.yy",
+    "name": "oObjectiveOBJ",
+    "path": "objects/oObjectiveOBJ/oObjectiveOBJ.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

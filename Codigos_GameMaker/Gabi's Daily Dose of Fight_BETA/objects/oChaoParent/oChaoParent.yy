@@ -6,10 +6,13 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Especiais",
+    "path": "folders/Objects/Especiais.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "oBarreiraParent",
+    "path": "objects/oBarreiraParent/oBarreiraParent.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

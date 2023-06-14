@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "fabrica",
+    "path": "folders/Objects/Inimigos/fabrica.yy",
   },
   "parentObjectId": {
     "name": "oObjectiveOBJ",

@@ -4,12 +4,14 @@
   "name": "oDeleter",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"oObstacleParent","path":"objects/oObstacleParent/oObstacleParent.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"oBossMarcoRedShot","path":"objects/oBossMarcoRedShot/oBossMarcoRedShot.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"oBossMarcoRedDente","path":"objects/oBossMarcoRedDente/oBossMarcoRedDente.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Especiais",
+    "path": "folders/Objects/Especiais.yy",
   },
   "parentObjectId": null,
   "persistent": false,

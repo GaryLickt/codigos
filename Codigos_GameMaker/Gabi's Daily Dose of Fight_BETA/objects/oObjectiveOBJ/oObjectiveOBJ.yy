@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Inimigos",
+    "path": "folders/Objects/Inimigos.yy",
   },
   "parentObjectId": {
     "name": "oObstacleParent",

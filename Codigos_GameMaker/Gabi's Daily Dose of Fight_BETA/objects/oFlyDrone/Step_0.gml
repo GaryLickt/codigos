@@ -8,3 +8,5 @@ _dash.sprite_index = sprite_index;
 }
 
 y = startY + (sin(current_time/waveTime) * waveHeight)
+
+instance_create_layer(x,y,"Instances",oWhiteRay);

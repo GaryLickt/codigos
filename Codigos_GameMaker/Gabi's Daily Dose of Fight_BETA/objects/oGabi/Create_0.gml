@@ -14,6 +14,9 @@ angle = 0;
 
 caos = 0;
 actvi1 = false;
+actvi2 = false;
+actvi3 = false;
+actvi4 = false;
 
 skill1 = 0
 skill2 = 0

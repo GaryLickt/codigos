@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+if room_get_name(room) != "RoomBoss1" {
 mdis = 25 * global.level;
 
 if (correndo == true and passou == false) and (oGabi.dead == false) {
@@ -17,4 +18,7 @@ prepassou = true;
 if oGabi.dead == true {
 	yay = true;
 	oSpawner.yay = true;
+}
+}else{
+
 }
