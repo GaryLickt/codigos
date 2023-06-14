@@ -1,6 +1,8 @@
 ![image](https://github.com/GaryLickt/codigos/assets/70419113/723483ad-f1bd-4cd9-9452-e129f1b9cec0)
 
-# ![image](https://github.com/GaryLickt/codigos/assets/70419113/9b8ce461-3e25-4b18-b820-f291d580293c)Gabi's Daily Dose of Fight BETA ![ezgif com-gif-maker](https://github.com/GaryLickt/codigos/assets/70419113/79bd1d05-09f7-412f-af70-abab31599060)
+# ![a6f0d973-e906-4489-85d9-6cece29e4023](https://github.com/GaryLickt/codigos/assets/70419113/b8c21388-8551-4473-8187-d3469f459fcc)Gabi's Daily Dose of Fight BETA  ![9e34d8ac-60c2-4cdb-a905-759f03eaa795](https://github.com/GaryLickt/codigos/assets/70419113/744d728e-fa8d-4333-8035-7e18591e7e43)
+
+
 
 <details>
 <summary>About the project - ES Version</summary>
@@ -12,7 +14,11 @@ This is a game project that I've been working on for a while, but recently I hav
 Esse é um projeto de jogo que eu venho trabalhando com o tempo, mas recentemente não tive muito tempo para mexer nele, então para prevenir que o Gamemaker não de problema, eu resolvi criar uma pasta dentro desse repositório com os arquivos do jogo, para preservar ele, talvez eu atualize essa área quando eu tiver tempo para mexer no jogo também, e também achei que seria legal deixar os arquivos do jogo aqui para ajudar alguém com duvida em relação a isso
 </details>
 
-# ![image](https://github.com/GaryLickt/codigos/assets/70419113/38dc0b3d-be34-4281-a1e8-4b5511654744)Project Concept - Conceito de Jogo ![ezgif com-rotate](https://github.com/GaryLickt/codigos/assets/70419113/31724a85-9a6d-46d8-bf46-99ed9eacd11c)
+# ![a6f0d973-e906-4489-85d9-6cece29e4023](https://github.com/GaryLickt/codigos/assets/70419113/b8c21388-8551-4473-8187-d3469f459fcc)Project Concept - Conceito de Jogo  ![0bd03611-03e8-4472-bef8-b9ab016d5667](https://github.com/GaryLickt/codigos/assets/70419113/ec3a2f88-60c3-48c2-a880-b63cb3295b3a)
+
+
+
+
 
 <details>
 <summary>ES Version - Click to Open</summary>
