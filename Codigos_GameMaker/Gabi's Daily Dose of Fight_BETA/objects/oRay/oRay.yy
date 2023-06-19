@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_rayon",
-    "path": "sprites/spr_rayon/spr_rayon.yy",
+    "name": "spr_raiotrovao",
+    "path": "sprites/spr_raiotrovao/spr_raiotrovao.yy",
   },
   "spriteMaskId": null,
   "visible": true,

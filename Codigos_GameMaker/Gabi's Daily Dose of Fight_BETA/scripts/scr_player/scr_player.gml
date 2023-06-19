@@ -151,7 +151,9 @@
 		scr_player_collision()
 	
 		var _dash = instance_create_layer(x, y, "Instances", oDash)
-		_dash.sprite_index = sprite_index
+		_dash.sprite_index = sprite_index;
+		_dash.spd = 0.02;
+		_dash.image_alpha = 0.6;
 	}
 
 	function scr_player_collision(){
@@ -299,10 +301,20 @@
 
 	if shoot and (alarm[2] <= 0) and (dead == false) {
 	alarm[2] = 15;
-	var pow = instance_create_layer(x+30, y, "Instances", oMagShotInf);
+	var pow = instance_create_layer(x, y, "Instances", oMagShotInf);
 	pow.direction = point_direction(x, y, mouse_x, mouse_y+random_range(-0.5, 0.5));
 	pow.image_angle = point_direction(x, y, mouse_x, mouse_y+random_range(-0.5, 0.5));
 	pow.speed = 10;
+	
+	var pow1 = instance_create_layer(x, y, "Instances", oMagShotInf);
+	pow1.direction = point_direction(x, y, mouse_x+25, mouse_y+random_range(-0.5, 0.5));
+	pow1.image_angle = point_direction(x, y, mouse_x+25, mouse_y+random_range(-0.5, 0.5));
+	pow1.speed = 10;
+	
+	var pow2 = instance_create_layer(x, y, "Instances", oMagShotInf);
+	pow2.direction = point_direction(x, y, mouse_x-25, mouse_y+random_range(-0.5, 0.5));
+	pow2.image_angle = point_direction(x, y, mouse_x-25, mouse_y+random_range(-0.5, 0.5));
+	pow2.speed = 10;
 	}
 	#endregion
 
@@ -332,5 +344,16 @@
 
 	#endregion
 
+	}
+
+	function scr_player_boss_ded(){
+		vspd = vspd + grv;
+
+			x+= (image_xscale)*4;
+		y+= vspd;
+	
+		depth = -(y*10);
+		
+		angle += (image_xscale)*4;
 	}
 #endregion

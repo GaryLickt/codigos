@@ -19,5 +19,5 @@
   "sampleRate": 48000,
   "soundFile": "snd_jump7.wav",
   "type": 2,
-  "volume": 1.0,
+  "volume": 0.5,
 }

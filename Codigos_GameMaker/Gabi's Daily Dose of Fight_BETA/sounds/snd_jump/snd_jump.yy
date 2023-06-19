@@ -12,12 +12,12 @@
   "conversionMode": 0,
   "duration": 0.411927,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "jump",
+    "path": "folders/Sounds/jump.yy",
   },
   "preload": false,
   "sampleRate": 48000,
   "soundFile": "snd_jump.wav",
   "type": 2,
-  "volume": 1.0,
+  "volume": 0.49,
 }

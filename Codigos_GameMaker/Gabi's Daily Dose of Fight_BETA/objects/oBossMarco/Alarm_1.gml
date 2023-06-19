@@ -1,15 +1,19 @@
-/// @description Insert description here
+/// @description Snake Attack Start
 // You can write your code in this editor
-if (stop = false) and (oping = false) {
-	var shot = instance_create_layer(x-44, y+38, "Instances", oBossMarcoRedDente);
-	shot.direction = point_direction(x, y, oGabiBoss1.x, oGabiBoss1.y);
-	shot.image_angle = point_direction(x, y, oGabiBoss1.x, oGabiBoss1.y);
-	shot.speed = 2;
-	
-	var shot1 = instance_create_layer(x-25, y+31, "Instances", oBossMarcoRedDente);
-	shot1.direction = point_direction(x, y, oGabiBoss1.x, oGabiBoss1.y);
-	shot1.image_angle = point_direction(x, y, oGabiBoss1.x, oGabiBoss1.y);
-	shot1.speed = 2;
+if oGabiBoss1.dead = false {
+if hp >= 30 {
+if prio = 2 {
+if (atk3 = false) and (atk4 = false) {
+	sprite_index = spr_marcoBossSnake;
+	stop = true;
+	atk2 = true;
+	alarm[5] = 1;
+	alarm[8] = 120;
 }
-	
-alarm[1] = choose(150,300,450);
+prio = choose(3,4,4,4)
+alarm[1] = choose(80,160,240);
+alarm[2] = choose(80,160,240);
+alarm[6] = choose(80,160,240);
+}
+}
+}

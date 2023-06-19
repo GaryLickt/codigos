@@ -5,3 +5,6 @@ prepassou = false;
 global.level = 1;
 mdis = 25;
 yay = false;
+total = 0;
+ilife = total;
+maxlife = total + 75;

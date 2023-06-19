@@ -12,12 +12,12 @@
   "conversionMode": 0,
   "duration": 0.143152,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "ded",
+    "path": "folders/Sounds/ded.yy",
   },
   "preload": false,
   "sampleRate": 44100,
   "soundFile": "snd_ded.wav",
   "type": 0,
-  "volume": 1.0,
+  "volume": 0.5,
 }

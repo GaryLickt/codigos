@@ -22,3 +22,5 @@ if oGabi.dead == true {
 }else{
 
 }
+
+total = clamp(total,ilife,maxlife);
