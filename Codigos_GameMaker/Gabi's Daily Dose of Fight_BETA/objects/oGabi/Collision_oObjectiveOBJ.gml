@@ -3,7 +3,7 @@
 if estado != scr_player_dash {
 if (dead == false) and (oControl.passou == false) {
 dead = true;
-estado = scr_player_dead;
+estado = scr_player_ded;
 vspd -= 8;
 audio_play_sound(choose(snd_ded,snd_ded2,snd_ded3,snd_ded4,snd_ded5), 1,0)
 }

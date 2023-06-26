@@ -39,9 +39,16 @@ if !boomerangReturning {
 	}
 }
 
-if oGabi.estado = scr_player_dead {
+if room_get_name(room) != "RoomBoss1"{
+if oGabi.estado = scr_player_ded {
 instance_destroy();
 }
+}else if room_get_name(room) = "RoomBoss1"{
+if oGabiBoss1.estado = scr_player_boss_ded {
+instance_destroy();
+}
+}
+
 }else{
 
 // Variáveis
@@ -81,7 +88,13 @@ if !boomerangReturning {
 	}
 }
 
-if oGabiBoss1.estado = scr_player_dead {
+if room_get_name(room) != "RoomBoss1"{
+if oGabi.estado = scr_player_ded {
 instance_destroy();
+}
+}else if room_get_name(room) = "RoomBoss1"{
+if oGabiBoss1.estado = scr_player_boss_ded {
+instance_destroy();
+}
 }
 }

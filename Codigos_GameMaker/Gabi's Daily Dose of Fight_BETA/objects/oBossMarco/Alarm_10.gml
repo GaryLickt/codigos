@@ -2,6 +2,7 @@
 // You can write your code in this editor
 if oGabiBoss1.dead = false {
 if hp > 0 {
+	ulti = true;
 var d = instance_create_layer(x,y,"Instances",oDash);
 d.image_xscale = 2;
 d.image_yscale = 2;
@@ -37,5 +38,7 @@ alarm[10] = 30;
 	shot3.image_yscale = 2;
 	shot3.direction = 270+choose(-20,0,20);
 	shot3.speed = 4;
+	
+	ulti = false;
 }
 }

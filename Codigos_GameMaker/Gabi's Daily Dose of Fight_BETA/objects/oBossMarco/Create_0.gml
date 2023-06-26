@@ -4,6 +4,7 @@ hp = 300;
 extra_hp = 0;
 stage = 1;
 ticks = 0;
+ulti = false;
 
 prio = 2;
 atk4 = false
@@ -12,8 +13,8 @@ atk2 = false
 stop = false
 oping = false
 randomize();
-Xmax = x+400;
-Xmin = x-400;
+Xmax = x+320;
+Xmin = x-320;
 
 Ymax = y+25;
 Ymin = y-25;

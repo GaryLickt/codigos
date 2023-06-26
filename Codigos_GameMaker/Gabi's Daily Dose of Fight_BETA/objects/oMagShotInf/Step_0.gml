@@ -7,7 +7,7 @@ ray.image_xscale = 0.5;
 ray.image_yscale = 0.5;
 
 if room_get_name(room) != "RoomBoss1" {
-if oGabi.estado = scr_player_dead {
+if oGabi.estado = scr_player_ded {
 ray.speed = speed;
 ray.direction = direction
 instance_destroy();

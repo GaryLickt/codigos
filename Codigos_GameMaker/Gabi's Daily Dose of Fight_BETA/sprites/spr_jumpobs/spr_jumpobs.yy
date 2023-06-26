@@ -3,9 +3,9 @@
   "resourceVersion": "1.0",
   "name": "spr_jumpobs",
   "bbox_bottom": 31,
-  "bbox_left": 1,
-  "bbox_right": 30,
-  "bbox_top": 1,
+  "bbox_left": 0,
+  "bbox_right": 31,
+  "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -21,12 +21,13 @@
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"456abba3-a04e-486d-990a-2ac4e8db232d","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d43ae999-1899-412b-92df-a543ab7b7e5a","blendMode":0,"displayName":"Layer 1","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "world1",
+    "path": "folders/Sprites/world1.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

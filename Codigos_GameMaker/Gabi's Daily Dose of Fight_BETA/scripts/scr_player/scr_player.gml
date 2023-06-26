@@ -34,13 +34,13 @@
 	hspd = lengthdir_x(spd,spd_dir);
 
 	if down {
-	grv = 0.6
+	grv = 0.8
 	}else{
-	grv = 0.3
+	grv = 0.4
 	}
 
 	if up and chao {
-	vspd -= 8;
+	vspd -= 10;
 	if !audio_is_playing(snd_jump) {
 	audio_play_sound(choose(snd_jump,snd_jump3,snd_jump4,snd_jump5,snd_jump6,snd_jump7),1,0);
 	}
@@ -95,50 +95,7 @@
 	}
 
 	function scr_player_run(){
-		scr_player_passed()
-	var left, right, up, down, chao;
-	left = keyboard_check(ord("A"));
-	right = keyboard_check(ord("D"));
-	up = keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_space);
-	down = keyboard_check(ord("S"));
-	chao = place_meeting(x, y + 1, oChaoParent);
-
-	var movex = right - left
-
-	vspd = vspd + grv;
-
-	cam_dir = floor(point_direction(x, y, mouse_x, mouse_y)/90)
-
-	switch(cam_dir){
-	case 0: image_xscale = 1;break;
-	case 1: image_xscale = -1;break;
-	case 2: image_xscale = -1;break;
-	case 3: image_xscale = 1;break;
-	}
-
-	if movex != 0 {
-	spd = 4;
-	}else{
-	spd = 0;
-	}
-	spd_dir = point_direction(x, y, x + movex, y);
-	hspd = lengthdir_x(spd,spd_dir);
-
-	if down {
-	grv = 0.5
-	}else{
-	grv = 0.2
-	}
-
-	if up and chao {
-	vspd -= 6;
-	}
-
-	var _dash = instance_create_layer(x, y, "Instances", oDash)
-	_dash.sprite_index = sprite_index
-
-
-	scr_player_collision();
+		
 	}
 
 	
@@ -186,39 +143,15 @@
 	y+= vspd;
 	}
 
-	function scr_player_dead_collision(){
-	var jumpower = 8;
-	x+= hspd;
+	function scr_player_ded(){
+		vspd = vspd + grv;
 
-	if place_meeting(x, y + vspd, oChaoParent) {
-	while(!place_meeting(x, y + sign(vspd), oChaoParent)){
-	y+=sign(vspd)
-	}
-	if jumpower > 0 {
-	vspd -= jumpower;
-	jumpower -= 2;
-	}else{
-	vspd = 0;
-	}
-	}
-	y+= vspd;
-	}
-
-	function scr_player_dead(){
-		sprite_index = spr_gabidead;
-	var chao = place_meeting(x, y + 1, oChaoParent);
-	spd = 4;
-	grv = 0.3;
-	spd_dir = point_direction(x, y, x + 1, y);
-	hspd = lengthdir_x(spd,spd_dir);
-	hspd -= 0.01;
-	vspd = vspd + grv;
-
-	if !chao {
-	angle -= 1;
-	}
-
-	scr_player_dead_collision()
+			x+= (image_xscale)*4;
+		y+= vspd;
+	
+		depth = -(y*10);
+		
+		angle += (image_xscale)*4;
 	}
 
 	function scr_player_passed(){
