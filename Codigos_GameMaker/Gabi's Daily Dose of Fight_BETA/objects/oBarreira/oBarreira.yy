@@ -29,7 +29,7 @@
   "physicsShapePoints": [],
   "physicsStartAwake": true,
   "properties": [],
-  "solid": false,
+  "solid": true,
   "spriteId": {
     "name": "spr_barreira",
     "path": "sprites/spr_barreira/spr_barreira.yy",

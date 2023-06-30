@@ -17,6 +17,19 @@ if room_get_name(room) = "RoomBoss1"{
 		y = lerp(y,(oGabiBoss1.y-100),0.05)+desvi;
 	}
 }
+if room_get_name(room) = "RoomBoss2"{
+	
+	if instance_exists(oBombCollision) {
+		desvi = choose(-1,1);
+	}else{
+	desvi = 0;
+	}
+	
+	if oGabiBoss2.estado != scr_player_boss2_ded {
+		x = lerp(x,(oGabiBoss2.x),0.05)+desvi;
+		y = lerp(y,(oGabiBoss2.y),0.05)+desvi;
+	}
+}
 	
 if room_get_name(room) = "RoomSelector"{
 	camera_set_view_pos(view_camera[0],cam,ypos)

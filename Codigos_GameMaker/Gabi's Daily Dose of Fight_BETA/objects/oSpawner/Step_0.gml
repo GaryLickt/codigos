@@ -9,6 +9,9 @@ if runcenario > 0 {
 runcenario -= 0.05;
 }
 if runcenario2 > 0 {
-runcenario2 -= 0.05;
+runcenario2 -= 0.03;
+}
+if runcenario3 > 0 {
+runcenario3 -= 0.01;
 }
 }

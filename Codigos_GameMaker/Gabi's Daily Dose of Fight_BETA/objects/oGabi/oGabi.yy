@@ -40,6 +40,9 @@
     "name": "spr_gabi",
     "path": "sprites/spr_gabi/spr_gabi.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "spr_gabicooll1",
+    "path": "sprites/spr_gabicooll1/spr_gabicooll1.yy",
+  },
   "visible": true,
 }

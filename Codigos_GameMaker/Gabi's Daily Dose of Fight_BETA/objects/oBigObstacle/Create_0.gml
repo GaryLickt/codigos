@@ -8,3 +8,7 @@ if global.level = 1 {
 sprite_index = spr_bigobs;
 image_index = irandom_range(0,image_number-1);
 }
+if global.level = 2 {
+sprite_index = spr_bigobs2;
+image_index = irandom_range(0,image_number-1);
+}

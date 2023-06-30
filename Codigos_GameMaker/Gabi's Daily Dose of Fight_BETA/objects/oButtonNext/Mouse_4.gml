@@ -30,6 +30,7 @@ room_goto(Room1);
 }else if nextboss = true {
 switch(variable_global_get("level")){
 case 1: room_goto(RoomBoss1);break;
+case 2: room_goto(RoomBoss2);break;
 }
 }
 

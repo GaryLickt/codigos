@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "chefões",
-    "path": "folders/Objects/Inimigos/chefões.yy",
+    "name": "boss1",
+    "path": "folders/Objects/Inimigos/chefões/boss1.yy",
   },
   "parentObjectId": {
     "name": "oBossMarcoKill",

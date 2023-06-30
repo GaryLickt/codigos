@@ -1,3 +1,5 @@
+randomize();
+
 distance = 0;
 correndo = false;
 passou = false;

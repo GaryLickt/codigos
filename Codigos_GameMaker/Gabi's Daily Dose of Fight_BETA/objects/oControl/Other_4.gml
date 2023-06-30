@@ -1,13 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
-if room_get_name(room) != "RoomBoss1" {
 	if room_get_name(room) = "Room1" {
 		correndo = true;
 		if !audio_is_playing(snd_factory){
 			audio_play_sound(snd_factory, 1, true)
 		}
 	}
-}else{
+
+if room_get_name(room) = "RoomBoss1" {
 	if !audio_is_playing(snd_factoryboss){
 		audio_play_sound(snd_factoryboss, 1, true)
 	}
@@ -15,6 +15,13 @@ if room_get_name(room) != "RoomBoss1" {
 	ilife = total;
 	maxlife = total + 75;
 }
+
+if room_get_name(room) = "RoomBoss2" {
+	total = (oGabiBoss2.hp*25) + 4;
+	ilife = total;
+	maxlife = total;
+}
+
 if room_get_name(room) = "EasterEgg" {
 alarm[3] = 10 * 60;
 }

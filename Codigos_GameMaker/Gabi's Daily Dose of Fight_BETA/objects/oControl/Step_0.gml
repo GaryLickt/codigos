@@ -10,7 +10,7 @@ mdis = 30;
 }
 
 if (correndo == true and passou == false) and (oGabi.dead == false) {
-distance += 0.01;
+distance += 0.02;
 
 }
 

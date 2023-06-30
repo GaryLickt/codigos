@@ -31,7 +31,7 @@ draw_text(textX, 150, "GAME OVER!!");
 draw_set_font(-1);
 
 }
-}else {
+}
 if room_get_name(room) = "RoomBoss1" {
 	draw_sprite(spr_healthbar_side,0,28,60-32)
 	var Xsao = 30;
@@ -77,7 +77,28 @@ draw_set_font(-1);
 
 }
 }
+if room_get_name(room) = "RoomBoss2" {
+// Barra de Vida do Jogador
+	
+		// DESENHA A PARTE DE TRAZ DA BARRA
+	var vazioX = 30;
+	for(var i = 0; i<total;i++){
+		draw_sprite(spr_cinzabarra,0,vazioX, 108)
+		vazioX += 1;
+	}
+	var vX = 32;
+	for(var i = 0; i<(total-4);i++){
+		draw_sprite(spr_fundobarra,0,vX, 108)
+		vX += 1;
+	}
+	healthbar_draw_ext(32,100,oGabiBoss2.hp*25,spr_barra,false,5, spr_barraescudo);
+	draw_set_font(f_boss2gui);
+	draw_set_halign(fa_center);
+	draw_text(125/2,100,string(oGabiBoss2.hp) + " / 5")
+	draw_set_font(-1);
+	draw_set_halign(-1);
 }
+
 #endregion
 
 if room_get_name(room) = "RoomSelector"{

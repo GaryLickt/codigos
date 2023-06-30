@@ -36,9 +36,12 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_gabi",
-    "path": "sprites/spr_gabi/spr_gabi.yy",
+    "name": "spr_gabistill",
+    "path": "sprites/spr_gabistill/spr_gabistill.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "spr_gabicooll1",
+    "path": "sprites/spr_gabicooll1/spr_gabicooll1.yy",
+  },
   "visible": true,
 }
