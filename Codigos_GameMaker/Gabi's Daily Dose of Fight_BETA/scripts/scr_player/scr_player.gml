@@ -26,9 +26,16 @@
 
 	#region Codigo Main()
 	if movex != 0 {
-	spd = 5;
+		if movex = 1 {
+			image_speed = 1.2;
+			spd = 5.2;
+		}else if movex = -1 {
+			image_speed = 0.8;
+			spd = 4.8;
+		}
 	}else{
-	spd = 0;
+		spd = 0;
+		image_speed = 1;
 	}
 	spd_dir = point_direction(x, y, x + movex, y);
 	hspd = lengthdir_x(spd,spd_dir);
@@ -46,7 +53,7 @@
 	}
 	}
 	if !chao {
-	sprite_index = spr_gabijump;
+		sprite_index = spr_gabijump;
 	}
 
 	scr_player_collision();
@@ -66,25 +73,30 @@
 	#endregion
 
 	#region Habilidades
-	if s1 and (skill1 <= 0) {
+	if s1 and (skill1 <= 0) and (global.sk1 = true) {
 	actvi1 = true;
 	alarm[3] = 180;
 	}
 
-	if s2 and (skill2 <= 0) and (!instance_exists(oWheel)) {
+	if s2 and (skill2 <= 0) and (!instance_exists(oWheel)) and (global.sk2 = true) {
 	actvi2 = true;
 	}
 
 	if actvi1 = true {
 		if irandom_range(0,10) < 5 {
-			var shot = instance_create_layer(x+10, y+irandom_range(-8, 8), "Instances", oMagShot);
+			var shot = instance_create_layer(x+30, y+3, "Instances", oMagShot);
 			shot.direction = point_direction(x, y, x + 1, y+random_range(-0.1, 0.1));
 			shot.image_angle = point_direction(x, y, x + 1, y+random_range(-0.1, 0.1));
 			shot.speed = 10;
 		}
+		if !chao {
+			sprite_index = spr_gabijumpshot;
+		}else{
+			sprite_index = spr_gabishot;
+		}
 	}
 	if actvi2 = true {
-	var bumer = instance_create_layer(x + 5, y+30, "Instances", oWheel);
+	var bumer = instance_create_layer(x + 5, y+35, "Instances", oWheel);
 	bumer.speed = 4;
 	bumer.direction = 0
 	actvi2 = false;
@@ -146,6 +158,7 @@
 
 	function scr_player_ded(){
 		vspd = vspd + grv;
+		sprite_index = spr_gabijump;
 
 			x+= (image_xscale)*4;
 		y+= vspd;
@@ -168,6 +181,7 @@
 		hspd = lengthdir_x(spd,spd_dir);
 		vspd = vspd + grv;
 
+		sprite_index = spr_gabiend;
 		scr_player_end_collision()
 	}
 #endregion

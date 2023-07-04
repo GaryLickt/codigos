@@ -14,23 +14,7 @@ draw_text(20, 200, global.level);
 draw_text(20, 220, global.fase);
 draw_text(40, 200, global.highlevel);
 
-var ent = global.level-1;
 
-draw_text(40, 220, oMainControl.level_map[# ent, 0]);
-
-if passou == true {
-	
-draw_set_font(f_bossfontBig);
-draw_text(textX, 150, "FASE CONCLUIDA!!");
-draw_set_font(-1);
-
-}
-if yay == true {
-	draw_set_font(f_bossfontBig);
-draw_text(textX, 150, "GAME OVER!!");
-draw_set_font(-1);
-
-}
 }
 if room_get_name(room) = "RoomBoss1" {
 	draw_sprite(spr_healthbar_side,0,28,60-32)
@@ -102,27 +86,38 @@ if room_get_name(room) = "RoomBoss2" {
 #endregion
 
 if room_get_name(room) = "RoomSelector"{
-	var name = "";
-	var xpo = display_get_gui_width()/2;
-	switch(oCamera.stage){
-	case 1: name = "Fabrica Chocante";break;
-	case 2: name = "Cidade Caotica";break;
-	case 3: name = "Pais do Fogo";break;
-	case 4: name = "Ilha Selvagem";break;
-	case 5: name = "Terra Dourada";break;
-	}
+	if !instance_exists(oTransicao) {
+		var name = "";
+		var corzin = c_white;
+		var xpo = display_get_gui_width()/2;
+		switch(oCamera.stage){
+		case 1: name = "Fabrica Chocante";corzin = c_yellow;break;
+		case 2: name = "Cidade Caotica";corzin = c_dkgray;break;
+		case 3: name = "Pais do Fogo";corzin = c_red;break;
+		case 4: name = "Ilha Selvagem";corzin = c_lime;break;
+		case 5: name = "Terra Dourada";corzin = c_orange;break;
+		}
 
-	if oMainControl.level_map[# oCamera.stage-1, 0] >= 1 {
-		draw_set_font(f_levelselector);
-		draw_set_halign(fa_center);
-		draw_text(xpo,60,name);
-		draw_set_halign(-1);
-		draw_set_font(-1);
-	}else{
-		draw_set_font(f_levelselector);
-		draw_set_halign(fa_center);
-		draw_text(xpo,60,"???");
-		draw_set_halign(-1);
-		draw_set_font(-1);
+		if oMainControl.level_map[# oCamera.stage-1, 0] >= 1 {
+			
+			draw_set_font(f_levelselector);
+			draw_set_halign(fa_center);
+			draw_set_color(corzin);
+			draw_text(xpo+2,62,name);
+			draw_set_color(c_white);
+			draw_text(xpo,60,name);
+			draw_set_halign(-1);
+			draw_set_font(-1);
+		}else{
+			
+			draw_set_font(f_levelselector);
+			draw_set_halign(fa_center);
+			draw_set_color(c_black);
+			draw_text(xpo+2,62,"???");
+			draw_set_color(c_white);
+			draw_text(xpo,60,"???");
+			draw_set_halign(-1);
+			draw_set_font(-1);
+		}
 	}
 }

@@ -4,8 +4,8 @@
   "name": "spr_background2",
   "bbox_bottom": 351,
   "bbox_left": 0,
-  "bbox_right": 703,
-  "bbox_top": 235,
+  "bbox_right": 1407,
+  "bbox_top": 111,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -20,7 +20,8 @@
   "height": 352,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"afda9e31-81b0-43bd-be0a-a023be6595ea","blendMode":0,"displayName":"Layer 1","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"b1b79a83-7592-4e9b-98b6-6d54c504219f","blendMode":0,"displayName":"Layer 2","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"4a8cbe0c-9b98-445a-a8d2-80f3e22316ec","blendMode":0,"displayName":"Layer 1","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -70,5 +71,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 704,
+  "width": 1408,
 }

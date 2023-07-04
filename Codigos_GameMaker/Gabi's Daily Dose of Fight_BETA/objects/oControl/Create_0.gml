@@ -10,4 +10,6 @@ total = 0;
 ilife = total;
 maxlife = total + 75;
 
+
+
 // Coisas envolvendo MOUSE e BOTOES

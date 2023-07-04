@@ -26,13 +26,19 @@ variable_global_set("highlevel",variable_global_get("level"));
 }
 
 if nextboss = false {
-room_goto(Room1);
+var trans = instance_create_depth(0,0,-9000,oTransicao);
+instance_create_depth(0,room_height,-9000,oTransicaoDown);
+trans.sala = Room1;
 }else if nextboss = true {
 switch(variable_global_get("level")){
-case 1: room_goto(RoomBoss1);break;
-case 2: room_goto(RoomBoss2);break;
+case 1: var trans = instance_create_depth(0,0,-9000,oTransicao);
+instance_create_depth(0,room_height,-9000,oTransicaoDown);
+trans.sala = RoomBoss1;break;
+case 2: var trans = instance_create_depth(0,0,-9000,oTransicao);
+instance_create_depth(0,room_height,-9000,oTransicaoDown);
+trans.sala = RoomBoss2;break;
 }
 }
-
+global.fras_count = 0;
 audio_stop_all();
 }

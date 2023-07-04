@@ -1,0 +1,4 @@
+/// @description Insert description here
+// You can write your code in this editor
+image_xscale = room_width;
+sala = 0;
