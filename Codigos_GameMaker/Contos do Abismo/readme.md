@@ -26,3 +26,4 @@ alem de ser dividido em capitulos, aonde cada capitulo tem um personagem princip
 | em breve | Ethan |
 | em breve | Jacob |
 ## Inimigos
+em breve :)
