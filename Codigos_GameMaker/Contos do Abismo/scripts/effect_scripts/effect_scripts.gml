@@ -11,3 +11,10 @@ function approach(_from, _to, _delta)
         return max(_from - _delta, _to);
     }
 }
+
+function IniciaCachorrada(){
+	if instance_exists(oTeddyScene){
+		oTeddyScene.ready = true;
+	}
+	instance_destroy();
+}

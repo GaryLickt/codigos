@@ -13,7 +13,9 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"19c7c7a8-0a9b-4ba5-9f5f-60eb9e061638",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5c4ae713-5f53-4969-b4fe-b4aa1c9e96c6",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5e649ce9-8731-45ea-b1a9-995d0b49693b",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"afc2b8bb-82ed-4bdb-836b-730bb720c081",},
   ],
   "gridX": 0,
@@ -21,8 +23,7 @@
   "height": 32,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"11c45bfa-74aa-46a8-83be-52d38b47b362","blendMode":0,"displayName":"Layer 1","isLocked":false,"opacity":39.0,"visible":true,},
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"da370256-c3eb-4428-97f0-4a711fdca221","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"02d5f09e-90eb-471b-91f3-f856f3eb98d8","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 7,
@@ -45,7 +46,7 @@
     "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "eventStubScript": null,
     "eventToFunction": {},
-    "length": 2.0,
+    "length": 4.0,
     "lockOrigin": false,
     "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "playback": 1,
@@ -56,8 +57,10 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"5c4ae713-5f53-4969-b4fe-b4aa1c9e96c6","path":"sprites/spr_allan_walk/spr_allan_walk.yy",},},},"Disabled":false,"id":"a73ef0b7-e759-4ab9-b671-2255c7f4fbc9","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"afc2b8bb-82ed-4bdb-836b-730bb720c081","path":"sprites/spr_allan_walk/spr_allan_walk.yy",},},},"Disabled":false,"id":"c70b41df-54ac-46ac-95c9-2cb1b9a439b6","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"19c7c7a8-0a9b-4ba5-9f5f-60eb9e061638","path":"sprites/spr_allan_walk/spr_allan_walk.yy",},},},"Disabled":false,"id":"7d68cb18-a7c2-4381-b7e5-0c009bb6052a","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"5c4ae713-5f53-4969-b4fe-b4aa1c9e96c6","path":"sprites/spr_allan_walk/spr_allan_walk.yy",},},},"Disabled":false,"id":"a73ef0b7-e759-4ab9-b671-2255c7f4fbc9","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"5e649ce9-8731-45ea-b1a9-995d0b49693b","path":"sprites/spr_allan_walk/spr_allan_walk.yy",},},},"Disabled":false,"id":"ddf88300-d85f-4f9f-b22f-4f70602f45d9","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"afc2b8bb-82ed-4bdb-836b-730bb720c081","path":"sprites/spr_allan_walk/spr_allan_walk.yy",},},},"Disabled":false,"id":"c70b41df-54ac-46ac-95c9-2cb1b9a439b6","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

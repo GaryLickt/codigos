@@ -1,6 +1,15 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 #region TEDDY
+function scr_teddy_checkroom(){
+if (room_get_name(room) = "Room4") {
+alarm[1] = 1;
+oAllan.detect = true;
+puto = true;
+state = scr_teddy_chaseroom;
+}
+}
+
 function scr_teddy_check(){
 var isVisible = !collision_line(x, y, oAllan.x, oAllan.y, oBarrier, false, true);
 if ((distance_to_object(oAllan) < 200) and oAllan.visi = false) and isVisible {
@@ -18,6 +27,7 @@ function scr_teddy_choose(){
 	}
 	puto = false;
 scr_teddy_check();
+scr_teddy_checkroom();
 pos_state = choose(scr_teddy_still, scr_teddy_walk);
 
 if pos_state = scr_teddy_walk {
@@ -42,6 +52,7 @@ function scr_teddy_still(){
 		case false: sprite_index = spr_teddy_still;break;
 	}
 scr_teddy_check();
+scr_teddy_checkroom();
 }
 
 function scr_teddy_walk(){
@@ -51,6 +62,7 @@ function scr_teddy_walk(){
 		case false: sprite_index = spr_teddy_walk;break;
 	}
 scr_teddy_check();
+scr_teddy_checkroom();
 	scr_collision();
 dir_a = floor(spd_dir/90);
 switch(dir_a){
@@ -82,7 +94,29 @@ state = scr_teddy_still;
 oAllan.detect = false;
 }
 	
-if (place_meeting(x, y, oFlashBarrier)) and (isVisible){
+if ((place_meeting(x, y, oFlashBarrier)) and (oLight.pisca = false)) and (isVisible){
+state = scr_teddy_chock;
+oAllan.detect = false;
+}
+}
+
+function scr_teddy_chaseroom(){
+	var isVisible = !collision_line(x, y, oAllan.x, oAllan.y, oBarrier, false, true);
+	sprite_index = spr_teddy_chase;
+dest_x = oAllan.x;
+dest_y = oAllan.y;
+spd_dir = point_direction(x, y, dest_x, dest_y);
+
+dir_a = floor(spd_dir/90);
+switch(dir_a){
+case 0: image_xscale = 1;break;
+case 1: image_xscale = -1;break;
+case 2: image_xscale = -1;break;
+case 3: image_xscale = 1;break;
+}
+
+	
+if (place_meeting(x, y, oFlashBarrier)) and (oLight.pisca = false){
 state = scr_teddy_chock;
 oAllan.detect = false;
 }
@@ -94,8 +128,12 @@ function scr_teddy_chock(){
 		case false: sprite_index = spr_teddy_still;break;
 	}
 	puto = false;
-if place_meeting(x, y, oFlashBarrier) {
-alarm[0] = 240;
+if (place_meeting(x, y, oFlashBarrier) and (oLight.pisca = false)) {
+if room_get_name(room) = "Room4" {
+alarm[0] = 4;
+}else{
+alarm[0] = choose(4,9,60,120,180,240);
+}
 }
 }
 

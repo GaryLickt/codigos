@@ -20,7 +20,8 @@
   "height": 64,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"143e427d-8b84-4c14-859d-5d4c4dd2ec15","blendMode":0,"displayName":"Layer 1","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"143e427d-8b84-4c14-859d-5d4c4dd2ec15","blendMode":0,"displayName":"Layer 1","isLocked":false,"opacity":65.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"0483ab12-c569-4b83-b7c5-68e503b388e3","blendMode":0,"displayName":"Layer 2","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 7,

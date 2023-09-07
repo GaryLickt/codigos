@@ -8,5 +8,7 @@ visao = oAllan.visi;
 depth = -y;
 
 if state = scr_teddy_chock {
-
+MySpeed = 0;
+path_delete(path);
+path = path_add();
 }

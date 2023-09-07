@@ -10,7 +10,7 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 121.84617,
+  "duration": 92.727295,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "snd_h1ambient.wav",
   "type": 0,
-  "volume": 0.5,
+  "volume": 0.45,
 }

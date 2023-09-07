@@ -2,7 +2,7 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_tilesetcasaparede",
-  "bbox_bottom": 191,
+  "bbox_bottom": 255,
   "bbox_left": 25,
   "bbox_right": 319,
   "bbox_top": 57,
@@ -20,6 +20,8 @@
   "height": 320,
   "HTile": false,
   "layers": [
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"88154472-92f6-4901-8a59-467f8b480ea8","blendMode":0,"displayName":"Layer 1","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d42d2576-457c-453e-999c-82cc484526c1","blendMode":0,"displayName":"Layer 2","isLocked":false,"opacity":100.0,"visible":true,},
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"478d85f0-5c02-4d24-aac9-18faa03d9af4","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,

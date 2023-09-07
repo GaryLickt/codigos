@@ -2,8 +2,8 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_tilesetsombrachao",
-  "bbox_bottom": 287,
-  "bbox_left": 160,
+  "bbox_bottom": 314,
+  "bbox_left": 40,
   "bbox_right": 269,
   "bbox_top": 96,
   "bboxMode": 0,
@@ -20,6 +20,7 @@
   "height": 320,
   "HTile": false,
   "layers": [
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"04c8b3dc-b817-4b1c-b26d-8317fff0bf0c","blendMode":0,"displayName":"Layer 1","isLocked":false,"opacity":100.0,"visible":true,},
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"b2440556-36e4-41c4-bdd8-5d6f5c2e26b0","blendMode":0,"displayName":"default","isLocked":false,"opacity":36.0,"visible":true,},
   ],
   "nineSlice": null,

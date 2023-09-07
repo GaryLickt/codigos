@@ -6,6 +6,7 @@ hspd = 0;
 vspd = 0;
 spd_dir = 0
 dir_a = 0;
+dir = 0;
 
 dest_x = 0;
 dest_y = 0;

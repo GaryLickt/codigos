@@ -2,7 +2,7 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_tilesetcasaparedecursed",
-  "bbox_bottom": 191,
+  "bbox_bottom": 255,
   "bbox_left": 25,
   "bbox_right": 319,
   "bbox_top": 57,
@@ -20,6 +20,8 @@
   "height": 320,
   "HTile": false,
   "layers": [
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"ac59a006-da98-4b12-b4a0-62be7add5143","blendMode":0,"displayName":"Layer 1","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"ea6e4a02-3da4-4b4a-97f1-9556fe048bc2","blendMode":0,"displayName":"Layer 2","isLocked":false,"opacity":100.0,"visible":true,},
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"86e6b4ec-af1f-4dcf-afc3-31a5462db439","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,

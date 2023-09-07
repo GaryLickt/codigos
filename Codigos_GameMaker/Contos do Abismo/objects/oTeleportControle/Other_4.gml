@@ -41,4 +41,5 @@ if ((startX != 0) and (startY!=0)) {
 	}
 	startX = 0;
 	startY = 0;
+	
 }

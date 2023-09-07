@@ -13,6 +13,9 @@ if surface_exists(surf) {
 		if (oAllan.flash = true) and (pisca = false) {
 			gpu_set_blendmode(bm_subtract);
 			draw_sprite_ext(spr_flashlight,0,oAllan.x,oAllan.y,1+treme,1+treme,ang,c_white,1);
+			if instance_exists(oSavePoint){
+			draw_sprite_ext(spr_miniflashlight,0,oSavePoint.x,oSavePoint.ypos-16,1,1,ang,c_white,1);
+			}
 			gpu_set_blendmode(bm_normal);
 		}
 		
@@ -37,14 +40,19 @@ if surface_exists(surf) {
 		
 		gpu_set_blendmode(bm_subtract);
 		draw_sprite_ext(spr_flashcore,0,oAllan.x,oAllan.y,1+treme,1+treme,ang,c_white,1);
+		if instance_exists(oSavePoint){
+		draw_sprite_ext(spr_miniflashcore,0,oSavePoint.x,oSavePoint.ypos-16,1,1,ang,c_white,1);
+		}
 		gpu_set_blendmode(bm_normal);
 		
 		draw_sprite_ext(spr_flashcore,0,oAllan.x,oAllan.y,1+treme,1+treme,ang,c_purple,0.6);
+		if instance_exists(oSavePoint){
+		draw_sprite_ext(spr_miniflashcore,0,oSavePoint.x,oSavePoint.ypos-16,1,1,ang,c_purple,0.6);
+		}
 	}
 
 surface_reset_target();
 }else{
 surf = surface_create(room_width,room_height);
 }
-
 draw_surface(surf,0,0);
