@@ -3,11 +3,24 @@
 #include <time.h>
 #include <string.h>
 
+// Função para escolher uma (ou mais) palavra aleatoria
+// Aviso do criador: melhor deixar essa função fechada
 void escolherPalavras(char* palavra, char* palavra2, char* palavra3){
   int chanc = rand() % 51;
   int chanc2 = rand() % 51;
   int chanc3 = rand() % 51;
 
+  if (chanc3 == chanc && chanc3 < 50){
+    chanc3 += 1;
+  }
+  if (chanc2 == chanc && chanc2 < 50){
+    chanc2 += 1;
+  }
+  if (chanc3 == chanc2 && chanc3 < 50){
+    chanc3 += 1;
+  }
+  
+  // Escolhendo Palavra 1
   switch(chanc){
     case 0: strcpy(palavra, "REZAR");break;
     case 1: strcpy(palavra, "FEIRA");break;
@@ -65,7 +78,7 @@ void escolherPalavras(char* palavra, char* palavra2, char* palavra3){
     case 49: strcpy(palavra, "DIGNO");break;
     case 50: strcpy(palavra, "MUNDO");break;
   }
-  
+  // Escolhendo Palavra 2
   switch(chanc2){
     case 0: strcpy(palavra2, "REZAR");break;
     case 1: strcpy(palavra2, "FEIRA");break;
@@ -123,7 +136,7 @@ void escolherPalavras(char* palavra, char* palavra2, char* palavra3){
     case 49: strcpy(palavra2, "DIGNO");break;
     case 50: strcpy(palavra2, "MUNDO");break;
   }
-  
+  // Escolhendo Palavra 3
   switch(chanc3){
     case 0: strcpy(palavra3, "REZAR");break;
     case 1: strcpy(palavra3, "FEIRA");break;
@@ -185,23 +198,34 @@ void escolherPalavras(char* palavra, char* palavra2, char* palavra3){
 }
 
 int main() {
+  // Definição de Variaveis
   char palavra[7], palavraCriada[7],palavraDada[7],novamente,outro_modo;
   char palavra2[7], palavra2Criada[7],palavra2Dada[7];
   char palavra3[7], palavra3Criada[7],palavra3Dada[7];
   int i, j, tentativas = 0, acertos = 0,acertou = 0,denovo = 0,chances = 6,partidas=1,modo_jogo=0;
+  float pontos = 0;
+  
+  // Inicializa o Gerador de numero aleatorio
   srand(time(NULL));
 
-  printf("Qual Modo de jogo deseja jogar?\n(0 - Solo / 1 - Duo / 2 - Trio)\n(3 - Hardcore WIP / 4 - Anagrama WIP)\n> ");
+  // Seleciona Modo de Jogo
+  printf("Qual Modo de jogo deseja jogar?\n(0 - Solo / 1 - Duo / 2 - Trio)\n(3 - Hardcore / 4 - Anagrama)\n> ");
   scanf("%d",&modo_jogo);
+
+  // While principal do jogo, se repete ate que o jogador deseje parar de jogar
   while(denovo == 0) {
     strcpy(palavraCriada, "#####");
     strcpy(palavra2Criada, "#####");
     strcpy(palavra3Criada, "#####");
 
+    // Chama a função para definir as palavras aleatorias
     escolherPalavras(palavra,palavra2,palavra3);
-
+    system("clear");
+    // Verifica qual o modo de jogo, e executa o codigo baseado nele
     if (modo_jogo == 0) {
       printf("TERMO 2: C Edition\nModo: Solo\n\n");
+      
+      // While principal da partida, se repete ate que o jogador acerte a letra, ou ate suas chances acabarem
       while(acertou == 0 && chances > 0){
         printf("%d tentativa(s) restante(s).\n",chances);
         printf("PALAVRA: %s\n> ",palavraCriada);
@@ -246,6 +270,7 @@ int main() {
           printf("\nParabéns, você acertou!\n");
           acertou = 1;
           acertos += 1;
+          pontos += 0.75;
         }else if (chances <= 0){
           printf("\nQue pena, você perdeu! a palavra certa era '%s'\n",palavra);
         }
@@ -254,6 +279,8 @@ int main() {
     }else if (modo_jogo == 1) {
         printf("TERMO 2: C Edition\nModo: Duo\n\n");
         chances = 9;
+      
+        // While principal da partida, se repete ate que o jogador acerte a letra, ou ate suas chances acabarem
         while(acertou == 0 && chances > 0){
           printf("%d tentativa(s) restante(s).\n",chances);
           printf("PALAVRAS: %s  %s\n> ",palavraCriada,palavra2Criada);
@@ -315,6 +342,7 @@ int main() {
             printf("\nParabéns, você acertou!\n");
             acertou = 1;
             acertos += 2;
+            pontos += 1.75;
           }else if (chances <= 0){
             printf("\nQue pena, você perdeu! as palavras certas eram '%s' e '%s'\n",palavra,palavra2);
           }
@@ -322,8 +350,10 @@ int main() {
         }
     }else if (modo_jogo == 2) {
         printf("TERMO 2: C Edition\nModo: Trio\n\n");
-      chances = 12;
-      while(acertou == 0 && chances > 0){
+        chances = 12;
+      
+        // While principal da partida, se repete ate que o jogador acerte a letra, ou ate suas chances acabarem
+        while(acertou == 0 && chances > 0){
         printf("%d tentativa(s) restante(s).\n",chances);
         printf("PALAVRAS: %s  %s  %s\n> ",palavraCriada,palavra2Criada,palavra3Criada);
         scanf(" %s", palavraDada);
@@ -399,12 +429,133 @@ int main() {
           printf("\nParabéns, você acertou!\n");
           acertou = 1;
           acertos += 3;
+          pontos += 2.75;
         }else if (chances <= 0){
           printf("\nQue pena, você perdeu! as palavras certas eram '%s', '%s' e '%s'\n",palavra,palavra2,palavra3);
         }
         getchar();
       }
+    }else if (modo_jogo == 3) {
+        printf("TERMO 2: C Edition\nModo: HARDCORE\n\n");
+          chances = 2;
+          palavraCriada[0] = palavra[0];
+          palavraCriada[strlen(palavraCriada)-1] = palavra[strlen(palavraCriada)-1];
+      
+          // While principal da partida, se repete ate que o jogador acerte a letra, ou ate suas chances acabarem
+          while(acertou == 0 && chances > 0){
+          printf("%d tentativa(s) restante(s).\n",chances);
+          printf("PALAVRA: %s\n> ",palavraCriada);
+          scanf(" %s", palavraDada);
+          while(strlen(palavraDada) != 5){
+            if (strlen(palavraDada) < 5){
+              printf("palavra muito pequena.\n> ");
+              getchar();
+              scanf(" %s", palavraDada);
+            }else if (strlen(palavraDada) > 5){
+              printf("palavra muito grande.\n> ");
+              getchar();
+              scanf(" %s", palavraDada);
+            }
+
+          }
+          printf("\n");
+          tentativas += 1;
+          chances -= 1;
+
+          for(int i = 0;palavra[i]!='\0';i++){
+            int valor = palavra[i];
+            int valor2 = palavra2[i];
+            int valor3 = palavra3[i];
+            int valorDado = palavraDada[i];
+
+            if (valorDado > 96 && valorDado < 123){
+              valorDado -= 32;
+            }
+            // Checa a palavra
+            if(valor == valorDado){
+              palavraCriada[i] = palavra[i];
+            }else{
+              if (palavraCriada[i] == '?'){
+                palavraCriada[i] = '#';
+              }
+              for(int j = 0;palavra[j]!='\0';j++){
+                int valor2 = palavra[j];
+                if (valor2 == valorDado && palavraCriada[i] != palavra[i]) {
+                  palavraCriada[i] = '?';
+                }
+              }
+            }
+          }
+          if (strcmp(palavra, palavraCriada) == 0){
+            printf("\nParabéns, você acertou!\n");
+            acertou = 1;
+            acertos += 1;
+            pontos += 3.75;
+          }else if (chances <= 0){
+            printf("\nQue pena, você perdeu! a palavra certa era '%s'\n",palavra);
+          }
+          getchar();
+        }
+    }else if (modo_jogo == 4){
+      printf("TERMO 2: C Edition\nModo: ANAGRAMA\n\n");
+        char palavraAnagrama[strlen(palavra)]; 
+        strcpy(palavraAnagrama, "#####");
+        strcpy(palavraCriada,palavra);
+
+        // Embaralha a palavra
+        for (int a = 0;a<strlen(palavra);a++){
+          int rando = rand() % strlen(palavra);
+          while(palavraAnagrama[rando] != '#'){
+            rando = rand() % strlen(palavra);
+          }
+          palavraAnagrama[rando] = palavra[a];
+          
+        }
+        // While principal da partida, se repete ate que o jogador acerte a letra, ou ate suas chances acabarem
+        while(acertou == 0 && chances > 0){
+        printf("%d tentativa(s) restante(s).\n",chances);
+        printf("PALAVRA: %s\n> ",palavraAnagrama);
+        scanf(" %s", palavraDada);
+        while(strlen(palavraDada) != 5){
+          if (strlen(palavraDada) < 5){
+            printf("palavra muito pequena.\n> ");
+            getchar();
+            scanf(" %s", palavraDada);
+          }else if (strlen(palavraDada) > 5){
+            printf("palavra muito grande.\n> ");
+            getchar();
+            scanf(" %s", palavraDada);
+          }
+
+        }
+        printf("\n");
+        tentativas += 1;
+        chances -= 1;
+
+          for(int i = 0;palavra[i]!='\0';i++){
+            int valor = palavra[i];
+            int valorDado = palavraDada[i];
+  
+            if (valorDado > 96 && valorDado < 123){
+              valorDado -= 32;
+            }
+            palavraDada[i] = valorDado;
+          }
+          
+        
+        if (strcmp(palavraDada, palavraCriada) == 0){
+          printf("\nParabéns, você acertou!\n");
+          acertou = 1;
+          acertos += 1;
+          pontos += 2.25;
+        }else if (chances <= 0){
+          printf("\nQue pena, você perdeu! a palavra certa era '%s'\n",palavra);
+        }
+        getchar();
+      }
     }
+    
+    // Verifica se o jogador ainda quer jogar, ou não
     printf("Deseja jogar novamente? (s/n)\n");
     scanf(" %c",&novamente);
     if (novamente == 's'){
@@ -412,10 +563,12 @@ int main() {
       acertou = 0;
       chances = 6;
       partidas+=1;
+      
+      // Verifica se o jogador quer trocar o modo de jogo, se sim, pergunta qual
       printf("Deseja trocar o modo de jogo? (s/n)\n");
       scanf(" %c",&outro_modo);
       if (outro_modo == 's'){
-        printf("Qual Modo de jogo deseja jogar agora?\n(0 - Solo / 1 - Duo / 2 - Trio)\n(3 - Hardcore WIP / 4 - Anagrama WIP)\n> ");
+        printf("Qual Modo de jogo deseja jogar agora?\n(0 - Solo / 1 - Duo / 2 - Trio)\n(3 - Hardcore / 4 - Anagrama)\n> ");
         scanf("%d",&modo_jogo);
       }
       
@@ -423,14 +576,10 @@ int main() {
       denovo = 1;
     }
     getchar();
-
+    system("clear");
   }
-  if (acertos > 0) {
-  printf("\nVocê acertou %d palavras de %d jogos.\n", acertos, partidas);
-  }else{
-    printf("\nQue pena. você não acertou nenhuma palavra!\n");
-  }
+  // Imprime uma mensagem baseada em quantas palavras o jogador acertou nos X jogos que ele jogou.
+  printf("\n= Fim de jogo =\n\nPontuação Final:\n> %.2g pontos obtidos\n> %d jogos finalizados\n> %d palavras acertadas\n",pontos,partidas,acertos);
 
   return 0;
 }
-
