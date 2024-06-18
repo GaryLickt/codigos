@@ -1,3 +1,5 @@
+# "Hunt-and-Kill Algorithm" (Algoritmo)
+
 import pygame
 import random
 import sys
@@ -6,6 +8,8 @@ import sys
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 GREEN = (0, 255, 0)
+
+stop_random = 0
 
 # Tamanho da tela
 SCREEN_WIDTH = 800
@@ -46,27 +50,26 @@ def draw_grid():
                 pygame.draw.rect(screen, GREEN, (x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE, CELL_SIZE))
     pygame.display.flip()
 
-# Função para gerar o labirinto
-def generate_maze(x, y):
-    stack = [(x, y)]
+# Função para gerar o labirinto usando Hunt-and-Kill Algorithm
+def generate_maze():
+    x, y = random.randrange(COLS), random.randrange(ROWS)
     grid[y][x] = 1
     total_cells = COLS * ROWS
     cells_visited = 1
     completion_rate = 0.1  # Taxa inicial de completude do labirinto para parar
 
-    while stack:
-        current = stack[-1]
-        x, y = current
+    current = (x, y)
+    while True:
         valid_moves = []
 
         for move in moves:
-            nx, ny = x + move[1], y + move[0]
+            nx, ny = current[0] + move[0], current[1] + move[1]
             if is_valid_cell(nx, ny):
                 valid_moves.append((nx, ny))
 
         if valid_moves:
             next_cell = random.choice(valid_moves)
-            stack.append(next_cell)
+            stack = [current, next_cell]
             grid[next_cell[1]][next_cell[0]] = 1
             cells_visited += 1
             draw_grid()
@@ -76,20 +79,37 @@ def generate_maze(x, y):
             current_completion = cells_visited / total_cells
 
             # Determinar a probabilidade de parar com base na taxa de completude
-            if random.random() < completion_rate * current_completion:
+            if stop_random == 0 and random.random() < completion_rate * current_completion:
                 break  # Encerrar a geração do labirinto
 
+            current = next_cell
+
         else:
-            stack.pop()
+            found = False
+            for y in range(ROWS):
+                for x in range(COLS):
+                    if grid[y][x] == 0:
+                        neighbors = []
+                        for move in moves:
+                            nx, ny = x + move[0], y + move[1]
+                            if is_valid_cell(nx, ny) and grid[ny][nx] == 1:
+                                neighbors.append((nx, ny))
+                        if neighbors:
+                            current = (x, y)
+                            found = True
+                            break
+                if found:
+                    break
+
+            if not found:
+                break
 
         # Aumentar gradualmente a taxa de completude para aumentar a probabilidade de parar
         completion_rate += 0.001
 
 # Função principal
 def main():
-    a = random.randrange(0,COLS)
-    b = random.randrange(0,ROWS)
-    generate_maze(a, b)
+    generate_maze()
 
     running = True
     while running:
@@ -102,9 +122,7 @@ def main():
                     for y in range(ROWS):
                         for x in range(COLS):
                             grid[y][x] = 0
-                    a = random.randrange(0,COLS)
-                    b = random.randrange(0,ROWS)
-                    generate_maze(a, b)
+                    generate_maze()
 
         draw_grid()
         clock.tick(60)
