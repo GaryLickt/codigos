@@ -13,6 +13,6 @@ public class questao10 {
     String sobrenome = entrada.nextLine();
 
     System.out.println("Seu nome invertido é: " + sobrenome + " " + nome);
-    entrada.clear();
+    entrada.close();
   }
 }

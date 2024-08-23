@@ -10,5 +10,6 @@ public class questao16 {
     if (nome.length() > 5) {
       System.out.println("Seu nome tem mais de 5 caracteres");
     }
+    input.close();
   }
 }

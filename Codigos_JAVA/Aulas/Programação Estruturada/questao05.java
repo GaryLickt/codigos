@@ -9,5 +9,6 @@ public class questao05 {
     double num = sc.nextDouble();
     double quadrado = num * num;
     System.out.println("O quadrado de " + num + " é: " + quadrado);
+    sc.close();
   }
 }

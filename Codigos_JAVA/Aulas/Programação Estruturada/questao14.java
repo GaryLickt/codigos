@@ -15,5 +15,6 @@ public class questao14 {
     } else {
       System.out.println("O maior numero e: " + num2);
     }
+    sc.close();
   }
 }

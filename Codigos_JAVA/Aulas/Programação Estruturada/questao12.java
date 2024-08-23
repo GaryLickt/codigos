@@ -8,5 +8,6 @@ public class questao12 {
     System.out.println("Digite uma palavra: ");
     String palavra = sc.nextLine();
     System.out.println("O tamanho da palavra é: " + palavra.length());
+    sc.close();
   }
 }

@@ -16,6 +16,6 @@ public class questao36 {
     double valorDolar = valorReais / cotacaoDolar;
 
     System.out.println("O valor em dolares é: " + valorDolar);
-
+    sc.close();
   }
 }

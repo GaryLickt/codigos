@@ -8,5 +8,6 @@ public class questao09 {
     System.out.println("Digite o nome de um animal: ");
     String animal = sc.nextLine();
     System.out.println("O animal digitado foi: " + animal);
+    sc.close();
   }
 }

@@ -15,5 +15,6 @@ public class questao04 {
     soma = num1 + num2;
 
     System.out.println("A soma dos numeros é: " + soma);
+    sc.close();
   }
 }

@@ -26,6 +26,7 @@ public class ABB {
         No novo = new No(valor);
         if (isEmpty()){
             this.raiz = novo;
+            System.out.println("Valor inserido com sucesso!");
         }else{
             No aux = this.raiz;
 

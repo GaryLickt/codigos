@@ -9,5 +9,6 @@ public class questao08 {
     String input = sc.nextLine();
     String[] numeros = input.split(" ");
     System.out.println("Foram digitados " + numeros.length + " numeros.");
+    sc.close();
   }
 }

@@ -11,5 +11,6 @@ public class questao07 {
     String sobrenome = sc.nextLine();
     String nomeCompleto = nome + " " + sobrenome;
     System.out.println("Seu nome completo é: " + nomeCompleto);
+    sc.close();
   }
 }

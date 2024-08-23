@@ -13,5 +13,6 @@ public class questao39 {
     double fahrenheit = (celsius * 9 / 5) + 32;
 
     System.out.println("A temperatura em graus Fahrenheit é: " + fahrenheit);
+    sc.close();
   }
 }

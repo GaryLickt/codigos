@@ -11,5 +11,6 @@ public class questao15 {
     double altura = sc.nextDouble();
     double imc = peso / (altura * altura);
     System.out.println("Seu IMC é: " + imc);
+    sc.close();
   }
 }

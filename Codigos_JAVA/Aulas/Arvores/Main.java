@@ -3,13 +3,6 @@ import ArvoresBinariasdeBusca.*;
 
 public class Main {
 
-    static void Menu(){
-        System.out.println("O que deseja fazer?");
-        System.out.println("1- adicionar nó");
-        System.out.println("2- buscar nó");
-        System.out.println("3- listar arvore");
-        System.out.println("0 - sair");
-    }
     public static void main(String[] args) {
         ABB arvore = new ABB();
         Scanner sc = new Scanner(System.in);
@@ -17,7 +10,11 @@ public class Main {
         int op = -1;
         int valor = 0;
         do {
-            Menu();
+            System.out.println("O que deseja fazer?");
+            System.out.println("1- adicionar nó");
+            System.out.println("2- buscar nó");
+            System.out.println("3- listar arvore");
+            System.out.println("0 - sair");
             op = sc.nextInt();
             System.out.println("opção escolhida: " + op);
             switch(op){

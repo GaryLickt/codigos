@@ -10,5 +10,6 @@ public class questao26 {
     System.out.println("Digite uma string: ");
     String string = sc.next();
     System.out.println(numero + " " + string);
+    sc.close();
   }
 }
