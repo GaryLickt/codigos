@@ -16,7 +16,7 @@ public class Main {
             System.out.println("3- listar arvore");
             System.out.println("0 - sair");
             op = sc.nextInt();
-            System.out.println("opção escolhida: " + op);
+            
             switch(op){
                 case 1:
                     System.out.println("Digite o valor:");

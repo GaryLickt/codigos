@@ -62,16 +62,23 @@ public class ABB {
     No buscar(Integer valor){
         if (!isEmpty()){
             No aux = this.raiz;
+            No auxprox = this.raiz;
             do{
                 if (aux.getInfo() > valor){
-                    aux = aux.getDireita();
+                    auxprox = aux.getEsquerda();
+                    if (auxprox != null){
+                        aux = auxprox;
+                    }
                 }else if (aux.getInfo() < valor){
-                    aux = aux.getEsquerda();
+                    auxprox = aux.getDireita();
+                    if (auxprox != null){
+                        aux = auxprox;
+                    }
                 }else {
                     return aux;
                 }
             }
-            while(aux != null);
+            while(auxprox != null);
         }else{
             System.out.println("Arvore vazia.");
         }
@@ -151,7 +158,7 @@ public class ABB {
     private void percorrerEmOrdem(No r){
         if (r != null){
             percorrerEmOrdem(r.getEsquerda());
-            System.out.println(r.getInfo());
+            System.out.print(r.getInfo() + " ");
             percorrerEmOrdem(r.getDireita());
         }
     }
@@ -159,7 +166,7 @@ public class ABB {
         if (r != null){
             percorrerEmOrdem(r.getEsquerda());
             percorrerEmOrdem(r.getDireita());
-            System.out.println(r.getInfo());
+            System.out.print(r.getInfo() + " ");
         }
     }
     private void passeioPorNivel(No r){
@@ -175,7 +182,7 @@ public class ABB {
                 if (aux.getDireita() != null){
                     fila.enqueue(aux.getDireita());
                 }
-                System.out.println(aux.getInfo());
+                System.out.print(r.getInfo() + " ");
             }
         }
     }
@@ -184,21 +191,27 @@ public class ABB {
         if (this.isEmpty()){
             System.out.println("Arvore vazia.");
         }else{
+            System.out.print("[ ");
             percorrerEmOrdem(raiz);
+            System.out.println("]");
         }
     }
     public void posOrdem(){
         if (this.isEmpty()){
             System.out.println("Arvore vazia.");
         }else{
+            System.out.print("[ ");
             percorrerPosOrdem(raiz);
+            System.out.println("]");
         }
     }
     public void porNivel(){
         if (this.isEmpty()){
             System.out.println("Arvore vazia.");
         }else{
+            System.out.print("[ ");
             passeioPorNivel(raiz);
+            System.out.println("]");
         } 
     }
 
@@ -242,6 +255,114 @@ public class ABB {
 
             current = current.getDireita();
         }
+    }
+
+    public int contarNosRecursivo(No raiz) {
+        if (raiz == null) {
+            return 0;
+        }
+        return 1 + contarNosRecursivo(raiz.getEsquerda()) + contarNosRecursivo(raiz.getDireita());
+    }
+
+    public int contarNosNaoRecursivo(No raiz) {
+        if (raiz == null) {
+            return 0;
+        }
+    
+        int contador = 0;
+        Stack<No> stack = new Stack<>();
+        stack.push(raiz);
+    
+        while (!stack.isEmpty()) {
+            No atual = stack.pop();
+            contador++;
+    
+            if (atual.getDireita() != null) {
+                stack.push(atual.getDireita());
+            }
+    
+            if (atual.getEsquerda() != null) {
+                stack.push(atual.getEsquerda());
+            }
+        }
+    
+        return contador;
+    }
+
+    public int contarFolhasRecursivo(No raiz) {
+        if (raiz == null) {
+            return 0;
+        }
+    
+        if (raiz.getEsquerda() == null && raiz.getDireita() == null) {
+            return 1;
+        }
+    
+        return contarFolhasRecursivo(raiz.getEsquerda()) + contarFolhasRecursivo(raiz.getDireita());
+    }
+
+    public int contarFolhasNaoRecursivo(No raiz) {
+        if (raiz == null) {
+            return 0;
+        }
+    
+        int contador = 0;
+        Stack<No> stack = new Stack<>();
+        stack.push(raiz);
+    
+        while (!stack.isEmpty()) {
+            No atual = stack.pop();
+    
+            if (atual.getEsquerda() == null && atual.getDireita() == null) {
+                contador++;
+            }
+    
+            if (atual.getDireita() != null) {
+                stack.push(atual.getDireita());
+            }
+    
+            if (atual.getEsquerda() != null) {
+                stack.push(atual.getEsquerda());
+            }
+        }
+    
+        return contador;
+    }
+
+    public int contarNosNaoTerminaisRecursivo(No raiz) {
+        if (raiz == null || (raiz.getEsquerda() == null && raiz.getDireita() == null)) {
+            return 0;
+        }
+    
+        return 1 + contarNosNaoTerminaisRecursivo(raiz.getEsquerda()) + contarNosNaoTerminaisRecursivo(raiz.getDireita());
+    }
+
+    public int contarNosNaoTerminaisNaoRecursivo(No raiz) {
+        if (raiz == null) {
+            return 0;
+        }
+    
+        int contador = 0;
+        Stack<No> stack = new Stack<>();
+        stack.push(raiz);
+    
+        while (!stack.isEmpty()) {
+            No atual = stack.pop();
+    
+            if (atual.getEsquerda() != null || atual.getDireita() != null) {
+                contador++;
+            }
+    
+            if (atual.getDireita() != null) {
+                stack.push(atual.getDireita());
+            }
+    
+            if (atual.getEsquerda() != null) {
+                stack.push(atual.getEsquerda());
+            }
+        }
+    
+        return contador;
     }
 }
 
