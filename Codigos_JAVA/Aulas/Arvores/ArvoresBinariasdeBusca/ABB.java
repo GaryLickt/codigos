@@ -364,6 +364,61 @@ public class ABB {
     
         return contador;
     }
+
+    public int altura(){
+        if (this.isEmpty() == true){
+            return 0;
+        }else if (this.raiz.getEsquerda() == null && this.raiz.getDireita() == null){
+            return 0;
+        }else{
+            return alturaNo(this.raiz);
+        }
+    }
+
+    private int alturaNo(No no){
+        int a1, a2;
+        if (no == null){
+            return 0;
+        }else if (no.getEsquerda() == null && no.getDireita() == null){
+            return 0;
+        }else{
+            a1 = alturaNo(no.getEsquerda());
+            a2 = alturaNo(no.getDireita());
+
+            if (a1 > a2){
+                return 1 + a1;
+            }else{
+                return 1 + a2;
+            }
+        }
+    }
+
+    public No remover(Integer valor){
+        if (this.isEmpty() == true){
+            System.out.println("Arvore vazia.");
+            return null;
+        }else {
+            No filho = this.raiz;
+            No pai = this.raiz;
+
+            while(filho != null){
+                if (filho.getInfo() > valor){
+                    pai = filho;
+                    filho = filho.getEsquerda();
+                }else if (filho.getInfo() < valor){
+                    pai = filho;
+                    filho = filho.getDireita();
+                }else{
+                    if (filho.getEsquerda() == null && filho.getDireita() == null){
+                        pai = filho;
+                        filho = null;
+                    }
+                }
+            }
+            return pai;
+
+        }
+    }
 }
 
 class No {

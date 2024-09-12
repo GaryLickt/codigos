@@ -1,0 +1,6 @@
+1|Normal|Passinho|Comum|Mova-se 1 quadrado em qualquer direção|Movimento|1
+2|Normal|Movimento X|Raro|Mova-se 5 quadrados em qualquer diagonal|Movimento|1
+3|Eletrico|Teleporte|Epico|Teleporte para 5 quadrados em qualquer direção, inimigos a 1 quadrado de distancia ficam paralizados|Hibrido|2
+4|Normal|Corte|Comum|Ataque 1 inimigo a 1 quadrado de distancia|Ataque|1
+5|Normal|Corte X|Raro|Ataque 1 inimigo a 5 quadrados de distancia na diagonal|Ataque|1
+6|Eletrico|Onda de Choque|Epico|Ataque até 3 inimigos em um alcance de cone|Ataque|2
