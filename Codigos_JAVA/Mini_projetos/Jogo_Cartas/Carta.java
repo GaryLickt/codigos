@@ -26,6 +26,10 @@ public class Carta {
     }
   }
 
+  public String getTipo(){
+    return this.tipo;
+  }
+
   Map<String, String> gerarCarta(int idProcurado) {
         String linha;
         String arquivo = "cartas.txt"; // Nome do arquivo onde os dados estão armazenados
@@ -73,10 +77,18 @@ class CartaMovimento extends Carta {
     super(_id);
   }
 
+  void Movimentar(){
+
+  }
+
 }
 
 class CartaAtaque extends Carta {
   public CartaAtaque(int _id) {
     super(_id);
+  }
+
+  void Atacar(){
+    
   }
 }

@@ -4,3 +4,5 @@
 4|Normal|Corte|Comum|Ataque 1 inimigo a 1 quadrado de distancia|Ataque|1
 5|Normal|Corte X|Raro|Ataque 1 inimigo a 5 quadrados de distancia na diagonal|Ataque|1
 6|Eletrico|Onda de Choque|Epico|Ataque até 3 inimigos em um alcance de cone|Ataque|2
+7|Fogo|Chão Quente|Raro|Deixa uma area em linha reta pegando fogo|Ataque|2
+8|Escuridão|Fuga Sombria|Epico|Se move em qualquer direção, e fica imune a dano|Movimento|3
