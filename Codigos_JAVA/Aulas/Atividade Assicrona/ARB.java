@@ -30,7 +30,6 @@ public class ARB {
     }
     System.out.println("Valor inserido:");
     percorrer(true);
-    visitados.clear();
   }
 
   // Percorre recursivamente a árvore para adicionar um nó
@@ -152,6 +151,13 @@ public class ARB {
     ARBNode direita = no.getDireita();
     if (direita == null) return; // Verificação de segurança para evitar NullPointerException
 
+    // Verifica se é necessário aplicar rotação dupla
+    if (direita.getEsquerda() != null) {
+        // Rotação dupla à esquerda
+        rotacaoDireita(direita);
+    }
+
+    // Rotação simples à esquerda
     no.setDireita(direita.getEsquerda());
     if (direita.getEsquerda() != null) {
         direita.getEsquerda().setPai(no);
@@ -170,11 +176,19 @@ public class ARB {
     no.setPai(direita);
   }
 
+
   // Aplica rotação à direita (simples ou dupla)
   private void rotacaoDireita(ARBNode no) {
     ARBNode esquerda = no.getEsquerda();
     if (esquerda == null) return; // Verificação de segurança para evitar NullPointerException
 
+    // Verifica se é necessário aplicar rotação dupla
+    if (esquerda.getDireita() != null) {
+        // Rotação dupla à direita
+        rotacaoEsquerda(esquerda);
+    }
+
+    // Rotação simples à direita
     no.setEsquerda(esquerda.getDireita());
     if (esquerda.getDireita() != null) {
         esquerda.getDireita().setPai(no);
@@ -192,6 +206,7 @@ public class ARB {
     esquerda.setDireita(no);
     no.setPai(esquerda);
   }
+
 
   // Remover nó
   public void remover(Integer valor){
@@ -251,20 +266,33 @@ public class ARB {
         System.out.print("[ ");
         while (!fila.isEmpty()) {
             aux = fila.dequeue();
-            System.out.print(aux.getInfo() + "." + aux.getCor() + " ");
+            visitados.add(aux);
+            if (aux.getInfo() != null){
+              System.out.print(aux.getInfo() + "." + aux.getCor() + " ");
+            }else{
+              System.out.print(aux.getInfo() + " ");
+            }
 
             // Enfileira os filhos e incrementa os contadores
             if (aux.getEsquerda() != null) {
-                if (aux.getEsquerda().getInfo() != null && aux.getEsquerda().getEstado() == 1) {
+                if (aux.getEsquerda().getInfo() != null && aux.getEsquerda().getEstado() == 1 && !visitados.contains(aux.getEsquerda())) {
                     fila.enqueue(aux.getEsquerda());
                     contNodosProximoNivel++;
+                }else if (aux.getInfo() == null){
+                  fila.enqueue(aux.getEsquerda());
+                  contNodosProximoNivel++;
                 }
+                
             }
             if (aux.getDireita() != null) {
-                if (aux.getDireita().getInfo() != null && aux.getDireita().getEstado() == 1) {
+                if (aux.getDireita().getInfo() != null && aux.getDireita().getEstado() == 1 && !visitados.contains(aux.getDireita())) {
                     fila.enqueue(aux.getDireita());
                     contNodosProximoNivel++;
+                }else if (aux.getDireita().getInfo() == null){
+                  fila.enqueue(aux.getDireita());
+                  contNodosProximoNivel++;
                 }
+                
             }
 
             // Verifica se todos os nós do nível atual foram processados
@@ -291,59 +319,7 @@ public class ARB {
       }else{
         passeioPorNivel(this.raiz);
       }
+      visitados.clear();
     }
-  }
-}
-
-class ARBNode {
-  private Integer info;
-  private Cor cor;
-  private ARBNode esq;
-  private ARBNode dir;
-  private ARBNode pai;
-  private int estado;
-
-  ARBNode(Integer _valor){
-    this.info = _valor;
-    this.estado = 1;
-    this.cor = Cor.VERMELHO;
-  }
-
-  // Gets e Sets da classe
-  int getEstado(){
-    return this.estado;
-  }
-  Integer getInfo(){
-    return this.info;
-  }
-  Cor getCor(){
-    return this.cor;
-  }
-  ARBNode getEsquerda(){
-    return this.esq;
-  }
-  ARBNode getPai(){
-    return this.pai;
-  }
-  ARBNode getDireita(){
-    return this.dir;
-  }
-  void setEstado(int valor){
-    this.estado = valor;
-  }
-  void setInfo(Integer valor){
-    this.info = valor;
-  }
-  void setCor(Cor valor){
-    this.cor = valor;
-  }
-  void setEsquerda(ARBNode valor){
-    this.esq = valor;
-  }
-  void setPai(ARBNode valor){
-    this.pai = valor;
-  }
-  void setDireita(ARBNode valor){
-    this.dir = valor;
   }
 }
