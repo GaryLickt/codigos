@@ -9,7 +9,6 @@ public class ARB {
   private ARBNode raiz;
   private Set<ARBNode> visitados = new HashSet<>();
 
-
   // Gets e Sets da classe
   public ARBNode getRaiz(){
     return this.raiz;
